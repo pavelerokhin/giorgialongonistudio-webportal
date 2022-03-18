@@ -1,0 +1,50 @@
+.m-p-g__thumbs {
+  max-width: 24%;
+}
+
+#categories-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+
+  .category-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px auto;
+    width: 60%;
+
+    .category {
+      display: flex;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: repeat-y;
+      background-size: contain;
+      height: 420px;
+      max-width: 900px;
+      min-width: 300px;
+      width: 80%;
+    }
+
+    .category-title {
+      backdrop-filter: brightness(80%);
+      color: white;
+      cursor: url("/media/square_light.png") 3 3, auto;
+      line-height: 420px;
+      font-size: 28px;
+      font-weight: 300;
+      text-align: center;
+      text-transform: uppercase;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+#projects {
+  height: unset;
+  width: 100%;
+}

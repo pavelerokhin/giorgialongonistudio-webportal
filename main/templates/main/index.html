@@ -1,0 +1,243 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giorgia Longoni Studio</title>
+
+    <link rel="preload" as="image" href="/media/cross_light.png" />
+    <link rel="preload" as="image" href="media/sign.png" />
+    <link rel="preload" as="image" href="/media/square.png" />
+    <link rel="preload" as="image" href="/media/square_light.png" />
+    {% for slide in slides %}
+    <link rel="preload" as="image" href="{{ slide.photo.url }}" />
+    {% endfor %}
+    <link
+      type="text/css"
+      href="{% static 'main/css/index.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{% static 'favicon.ico' %}"
+    />
+  </head>
+
+  <body>
+    <div id="cover" class="no-transparent-glass">
+      <p>Giorgia Longoni Studio loads web-site contents...</p>
+      <img src="media/sign.png" alt="" srcset="" />
+    </div>
+    <div class="wrapper hidden">
+      <section id="main">
+        <div id="logo-menu" class="dark-panel">
+          <!-- <h1 id="logo">Giorgia Longoni Studio</h1> -->
+
+          <ul id="menu-container">
+            <img
+              id="logo"
+              src="media/logo.png"
+              alt="Giorgia Longoni Studio"
+              srcset=""
+              width="250"
+            />
+            <li id="menu-about" class="menu-item">
+              <a href="#about" class="menu-link">about</a>
+            </li>
+            <li id="menu-projects" class="menu-item">
+              <a href="#projects" class="menu-link">projects</a>
+            </li>
+            <li id="menu-contacts" class="menu-item">
+              <a href="#contacts" class="menu-link">contacts</a>
+            </li>
+          </ul>
+        </div>
+        <div id="blink-photos-main"></div>
+        <div id="carousel">
+          <div class="slideshows">
+            <div class="slideshow slideshow--hero">
+              <div class="slides">
+                {% for slide in slides %}
+                <div
+                  class="slide slide{{ slide.order }}"
+                  style="background-image: url({{slide.photo.url}})"
+                ></div>
+                {% endfor %}
+              </div>
+            </div>
+            <div
+              class="slideshow slideshow--contrast slideshow--contrast--before"
+            >
+              <div class="slides">
+                {% for slide in slides %}
+                <div
+                  class="slide slide{{ slide.order }}"
+                  style="background-image: url({{slide.photo.url}})"
+                ></div>
+                {% endfor %}
+              </div>
+            </div>
+            <div
+              class="slideshow slideshow--contrast slideshow--contrast--after"
+            >
+              <div class="slides">
+                {% for slide in slides %}
+                <div
+                  class="slide slide{{ slide.order }}"
+                  style="background-image: url({{slide.photo.url}})"
+                ></div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="asterisc">
+        <img src="media/sign.png" alt="" srcset="" />
+      </div>
+      <section id="about">
+        <p class="section-title">About Studio</p>
+
+        <div id="video-container">
+          <video autoplay muted loop>
+            <source
+              src="https://s3.eu-central-1.amazonaws.com/www.giorgialongonistudio.com/etc/bgvideo.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+        <div id="story-container" class="dark-panel">
+          <h1>{{ bio_title }}</h1>
+          <div id="paragraph-container">
+            {% for paragraph in bio_text %}
+            <p>{{ paragraph }}</p>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+      <div class="asterisc">
+        <img src="media/sign.png" alt="" srcset="" />
+      </div>
+      <section id="projects" style="position: relative">
+        <p class="section-title">Projects</p>
+        <div id="categories-container">
+          <div class="category-container">
+            {% if projects_present.headquarter %}
+            <a
+              href="/projects/headquarter"
+              id="headquarter"
+              class="category"
+              style="background-image: url('media/{{ category_covers.headquarter }}')"
+            >
+              <span class="category-title">headquarter</span>
+            </a>
+            {% endif %}
+          </div>
+          <div class="category-container">
+            {% if projects_present.hospitality %}
+            <a
+              href="/projects/hospitality"
+              id="hospitality"
+              class="category"
+              style="background-image: url('media/{{ category_covers.hospitality }}')"
+            >
+              <span class="category-title">hospitality</span>
+            </a>
+            {% endif %}
+          </div>
+          <div class="category-container">
+            {% if projects_present.residential %}
+            <a
+              href="/projects/residential"
+              id="residential"
+              class="category"
+              style="background-image: url('media/{{ category_covers.residential }}')"
+            >
+              <span class="category-title">residential</span>
+            </a>
+            {% endif %}
+          </div>
+          <div class="category-container">
+            {% if projects_present.retail %}
+            <a
+              href="/projects/retail"
+              id="retail"
+              class="category"
+              style="background-image: url('media/{{ category_covers.retail }}')"
+            >
+              <span class="category-title">retail</span>
+            </a>
+            {% endif %}
+          </div>
+          <div class="category-container">
+            {% if projects_present.scenography %}
+            <a
+              href="/projects/scenography"
+              id="scenography"
+              class="category"
+              style="background-image: url('media/{{ category_covers.scenography }}')"
+            >
+              <span class="category-title">scenography</span>
+            </a>
+            {% endif %}
+          </div>
+        </div>
+      </section>
+      <div class="asterisc">
+        <img src="media/sign.png" alt="" srcset="" />
+      </div>
+      <!-- <div id="parallax2" class="parallax"></div> -->
+      <section id="contacts">
+        <p class="section-title">Contacts</p>
+        <div id="contacts-container" class="dark-panel">
+          <a
+            href="mailto:giorgia@giorgialongonistudio.com"
+            class="contact contact-top"
+            id="source-email"
+            ><span class="source-label" id="source-email-label">mail:</span
+            ><span id="source-mail-content">
+              giorgia@giorgialongonistudio.com</span
+            ></a
+          >
+          <a
+            href="https://www.instagram.com/giorgialongonistudio"
+            target="blank"
+            class="contact contact-middle"
+            id="source-insta-pc"
+            ><span class="source-label source-insta-label">insta:</span
+            ><span id="source-insta-content"> @giorgialongonistudio</span></a
+          >
+          <!-- <a href="instagram://user?username=giorgialongonistudio" target="blank" class="contact contact-middle"
+                    id="source-insta-mobile"><span class="source-label source-insta-label">insta:</span><span
+                        class="source-insta-content">@giorgialongonistudio</span></a> -->
+          <a
+            href="tel:+393395756434"
+            class="contact contact-bottom"
+            id="source-tel"
+            ><span class="source-label" id="source-tel-label">tel:</span
+            ><span class="source-content"> +39 (339) 575-6434</span></a
+          >
+        </div>
+        <div id="blink-photos-contacts"></div>
+      </section>
+      <a id="go-up" href="#main">↑</a>
+      <footer class="glass">
+        <p id="copyright">Giorgia Longoni Studio 2022 ©</p>
+      </footer>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="{% static 'main/scripts/ajax.js' %}"></script>
+    <script src="{% static 'main/scripts/carousel.js' %}"></script>
+    <script src="{% static 'main/scripts/Blink.js' %}"></script>
+    <script src="{% static 'main/scripts/index.js' %}"></script>
+  </body>
+</html>

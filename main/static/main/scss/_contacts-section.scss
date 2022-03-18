@@ -1,0 +1,45 @@
+#contacts {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+
+  #contacts-container {
+    padding: 10px;
+    margin: auto;
+    position: absolute;
+    z-index: $z-index-front;
+
+    a {
+      border: 10px solid transparent;
+      color: white;
+      cursor: url("/media/cross_light.png") 3 3, auto;
+      display: block;
+      font-size: 1.7em;
+      height: 40px;
+      line-height: 40px;
+
+      &:visited {
+        color: $white;
+      }
+
+      &:hover {
+        * {
+          cursor: url("/media/cross_light.png") 3 3, auto;
+          text-decoration: underline;
+          font-weight: 500;
+        }
+      }
+
+      &:not(:first-child) {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  #contacts-photos {
+    bottom: 0;
+    position: sticky;
+    right: 0;
+  }
+}

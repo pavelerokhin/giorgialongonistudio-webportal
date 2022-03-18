@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ Title }}</title>
+
+    <link rel="preload" as="image" href="/media/cross_light.png" />
+    <link rel="preload" as="image" href="media/sign.png" />
+    <link rel="preload" as="image" href="/media/square.png" />
+    <link rel="preload" as="image" href="/media/square_light.png" />
+    <link
+      type="text/css"
+      href="{% static 'main/css/gallery_projects.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      type="text/css"
+      href="{% static 'main/css/material-photo-gallery.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{% static 'favicon.ico' %}"
+    />
+  </head>
+
+  <body>
+    <div id="cover" class="glass">
+      <p>Giorgia Longoni Studio loads web-site contents...</p>
+    </div>
+    <div id="projects-container" class="hidden">
+      <div id="menu">
+        <a href="/#projects" id="back">back</a>
+        <a href="/#about" id="about">about studio</a>
+        <a href="/#contacts" id="contacts">contacts</a>
+      </div>
+      <div class="projects">
+        <h1 id="projects-title">{{ category }}</h1>
+        <h1 id="projects-title-white">{{ category }}</h1>
+        {% for project in projects %}
+        <div class="project-container">
+          <div
+            class="project-back"
+            class="project"
+            style="background-image: url('{{project.project_photo.url}}')"
+          ></div>
+          <div
+            class="project-front"
+            onclick="get_detail('/detail/{{ project.id }}')"
+          >
+            <p class="name">{{ project.name }}</p>
+            <p class="caption">{{ project.caption }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div id="details-container">
+        <div id="details-title">
+          <p id="details-title-black"></p>
+          <p id="details-title-white"></p>
+        </div>
+        <div id="details" class="m-p-g"></div>
+      </div>
+    </div>
+
+    <script src="{% static 'main/scripts/material-photo-gallery.min.js' %}"></script>
+    <script src="{% static 'main/scripts/ajax.js' %}"></script>
+    <script src="{% static 'main/scripts/gallery.js' %}"></script>
+  </body>
+</html>

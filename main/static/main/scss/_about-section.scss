@@ -1,0 +1,71 @@
+#about {
+  height: 70vh;
+  overflow: hidden;
+  position: relative;
+
+  #story-container {
+    color: $white;
+    display: flex;
+    // justify-content: space-around;
+    margin-left: auto;
+    max-width: 450px;
+    min-width: 400px;
+    padding: 20px;
+    position: relative;
+    text-indent: 7px;
+    flex-direction: column;
+    z-index: $z-index-middle;
+
+    p {
+      margin: 5px;
+    }
+  }
+
+  #video-container {
+    height: 200%;
+    left: -50%;
+    position: absolute;
+    top: -50%;
+    width: 200%;
+    z-index: $z-index-background;
+
+    video {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      min-height: 50%;
+      min-width: 50%;
+    }
+  }
+}
+
+@include media(">=desktop") {
+  #about {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    padding: 15px;
+
+    #story-container {
+      margin-right: 150px;
+      position: unset;
+      width: 30%;
+    }
+
+    #video-container {
+      min-width: 500px;
+      position: unset;
+      height: auto;
+      width: auto;
+
+      video {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

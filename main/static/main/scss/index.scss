@@ -1,0 +1,64 @@
+@import "utils";
+@import "media-utils";
+@import "main-section";
+@import "carousel";
+@import "projects-section";
+@import "about-section";
+@import "contacts-section";
+
+footer {
+  bottom: 0;
+  color: white;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: $z-index-front;
+}
+
+.asterisc {
+  line-height: 38px;
+  text-align: center;
+  font-size: 38px;
+  margin: 50px 0;
+  padding: 3px 0;
+  height: 27px;
+  width: 100%;
+  img {
+    height: 27px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.section-title {
+  left: 50px;
+  position: absolute;
+  top: 50px;
+  font-weight: lighter !important;
+}
+
+$go-up-size: 34px;
+#go-up {
+  border: 1px solid black;
+  border-radius: $go-up-size;
+  display: block;
+  line-height: calc($go-up-size - 4px);
+  position: fixed;
+  right: 15px;
+  text-align: center;
+  top: 15px;
+  font-size: calc($go-up-size - 5px);
+  height: $go-up-size;
+  width: $go-up-size;
+  z-index: $z-index-front;
+  &:hover {
+    background-color: black;
+    color: white;
+    cursor: url("/media/square_light.png") 3 3, auto;
+  }
+  &:visited {
+    color: black;
+  }
+}
