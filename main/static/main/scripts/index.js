@@ -57,6 +57,19 @@ const contactsBlink = new Blink({
   timer: 5000,
 });
 
+/* Scroll to anchor for Firefox */
+function pgshow() {
+  var elId = window.location.hash;
+  if (elId.length > 1) {
+    el = document.getElementById(elId.substr(1));
+    if (el) {
+      el.scrollIntoView(true);
+    }
+  }
+}
+// pageshow fires after load and on Back/Forward
+window.addEventListener("pageshow", pgshow);
+
 window.onload = () => {
   let wrapper = document.querySelector(".wrapper");
   wrapper.classList.remove("hidden");
