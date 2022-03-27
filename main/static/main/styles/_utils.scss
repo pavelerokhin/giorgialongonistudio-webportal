@@ -65,6 +65,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 section {
   display: flex;
   height: 100vh;

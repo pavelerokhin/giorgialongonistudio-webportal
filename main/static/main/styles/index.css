@@ -49,6 +49,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 section {
   display: flex;
   height: 100vh;
@@ -504,8 +508,11 @@ ul {
   flex-direction: column;
   z-index: 100;
 }
+#about #story-container h1 {
+  margin-bottom: 7px;
+}
 #about #story-container p {
-  margin: 5px;
+  margin: 10px 0;
 }
 #about #video-container {
   height: 200%;
@@ -624,6 +631,7 @@ footer {
 #go-up {
   border: 1px solid black;
   border-radius: 34px;
+  color: black !important;
   display: block;
   line-height: 30px;
   position: fixed;
@@ -637,7 +645,6 @@ footer {
 }
 #go-up:hover {
   background-color: black;
-  color: white;
   cursor: url("/media/square_light.png") 3 3, auto;
 }
 #go-up:visited {

@@ -6,7 +6,6 @@
   #story-container {
     color: $white;
     display: flex;
-    // justify-content: space-around;
     margin-left: auto;
     max-width: 450px;
     min-width: 400px;
@@ -16,8 +15,12 @@
     flex-direction: column;
     z-index: $z-index-middle;
 
+    h1 {
+      margin-bottom: 7px;
+    }
+
     p {
-      margin: 5px;
+      margin: 10px 0;
     }
   }
 

@@ -43,6 +43,7 @@ $go-up-size: 34px;
 #go-up {
   border: 1px solid black;
   border-radius: $go-up-size;
+  color: black !important;
   display: block;
   line-height: calc($go-up-size - 4px);
   position: fixed;
@@ -55,7 +56,6 @@ $go-up-size: 34px;
   z-index: $z-index-front;
   &:hover {
     background-color: black;
-    color: white;
     cursor: url("/media/square_light.png") 3 3, auto;
   }
   &:visited {
