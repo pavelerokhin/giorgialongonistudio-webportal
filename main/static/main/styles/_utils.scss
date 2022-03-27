@@ -10,10 +10,10 @@ $white: #ffffff;
 //visibility order
 $z-index-background: 1;
 $z-index-back: 10;
+$z-index-hidden: 0;
 $z-index-middle: 100;
 $z-index-front: 1000;
 $z-index-foreground: 5000;
-
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -96,6 +96,11 @@ ul {
 .glass {
   backdrop-filter: brightness(70%);
   background: rgba(0, 0, 0, 0.15);
+}
+
+.hidden {
+  display: none;
+  z-index: $z-index-hidden;
 }
 
 .no-transparent-glass {

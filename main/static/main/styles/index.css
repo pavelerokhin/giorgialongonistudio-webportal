@@ -82,6 +82,11 @@ ul {
   background: rgba(0, 0, 0, 0.15);
 }
 
+.hidden {
+  display: none;
+  z-index: 0;
+}
+
 .no-transparent-glass {
   backdrop-filter: brightness(170%);
   background: rgba(255, 255, 255, 0.95);
@@ -615,10 +620,6 @@ footer {
 }
 .asterisc img {
   height: 27px;
-}
-
-.hidden {
-  display: none;
 }
 
 .section-title {

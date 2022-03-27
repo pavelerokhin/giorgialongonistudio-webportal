@@ -82,6 +82,11 @@ ul {
   background: rgba(0, 0, 0, 0.15);
 }
 
+.hidden {
+  display: none;
+  z-index: 0;
+}
+
 .no-transparent-glass {
   backdrop-filter: brightness(170%);
   background: rgba(255, 255, 255, 0.95);
@@ -217,6 +222,19 @@ button span {
   margin-right: 1px;
 }
 
+#details-container {
+  opacity: 1;
+  position: relative;
+  width: 40%;
+}
+
+#details-container-mobile {
+  opacity: 1;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+}
+
 #menu {
   border-right: 1px solid black;
   color: white;
@@ -237,17 +255,22 @@ button span {
   cursor: url("/media/square_light.png") 3 3, auto;
 }
 
-#details-container {
-  opacity: 1;
-  position: relative;
-  width: 40%;
-}
-
 @media (max-width: 1350px) {
-  #details-container {
-    opacity: 0;
-    position: relative;
-    z-index: 1;
+  #details-container,
+#details-container-mobile {
+    background-color: #ffffff;
+    padding: 15px;
+    position: fixed;
+    top: 25px;
+    height: 100vh;
+    width: 100%;
+  }
+
+  #menu {
+    background-color: white;
+    flex-direction: row;
+    height: 25px;
+    width: 100%;
   }
 }
 #projects-container {
@@ -261,6 +284,7 @@ button span {
   #projects-container .projects {
     align-items: center;
     justify-items: center;
+    min-width: 400px;
     width: 100%;
   }
 }

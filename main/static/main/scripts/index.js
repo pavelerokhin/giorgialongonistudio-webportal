@@ -1,33 +1,33 @@
-function showNextInGallery() {
-  const imgs = document.getElementsByClassName("img-in-gallery");
-  _toggleClasses(Object.values(imgs));
-}
+// function showNextInGallery() {
+//   const imgs = document.getElementsByClassName("img-in-gallery");
+//   _toggleClasses(Object.values(imgs));
+// }
 
-function showPrevioustInGallery() {
-  const imgs = document.getElementsByClassName("img-in-gallery");
-  _toggleClasses(Object.values(imgs).reverse());
-}
+// function showPrevioustInGallery() {
+//   const imgs = document.getElementsByClassName("img-in-gallery");
+//   _toggleClasses(Object.values(imgs).reverse());
+// }
 
-function _toggleClasses(imgs) {
-  let passCurrentToNext = false;
-  imgs.forEach((i) => {
-    if (passCurrentToNext) {
-      i.classList.remove("hidden");
-      i.classList.add("current");
-      passCurrentToNext = false;
-      return;
-    }
-    if (i.classList.contains("current")) {
-      i.classList.remove("current");
-      i.classList.add("hidden");
-      passCurrentToNext = true;
-    }
-  });
-  if (passCurrentToNext) {
-    imgs[0].classList.remove("hidden");
-    imgs[0].classList.add("current");
-  }
-}
+// function _toggleClasses(imgs) {
+//   let passCurrentToNext = false;
+//   imgs.forEach((i) => {
+//     if (passCurrentToNext) {
+//       i.classList.remove("hidden");
+//       i.classList.add("current");
+//       passCurrentToNext = false;
+//       return;
+//     }
+//     if (i.classList.contains("current")) {
+//       i.classList.remove("current");
+//       i.classList.add("hidden");
+//       passCurrentToNext = true;
+//     }
+//   });
+//   if (passCurrentToNext) {
+//     imgs[0].classList.remove("hidden");
+//     imgs[0].classList.add("current");
+//   }
+// }
 
 const blinkUrls = [
   "media/contacts_gallery/1.jpg",
