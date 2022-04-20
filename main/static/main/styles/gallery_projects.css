@@ -174,16 +174,10 @@ button span {
 .projects .project-container .project-front .name {
   color: white !important;
   cursor: url("/media/square_light.png") 3 3, auto !important;
-  font-weight: 400;
-  text-align: center;
+  font-size: 1.1rem;
+  font-weight: lighter;
   text-align: center;
   text-transform: uppercase;
-}
-.projects .project-container .project-front .name {
-  font-size: 12px;
-}
-.projects .project-container .project-front .caption {
-  font-size: 10px;
 }
 
 #details-title {
@@ -195,8 +189,8 @@ button span {
 }
 #details-title #details-title-black,
 #details-title #details-title-white {
+  font-size: 1.1rem;
   text-transform: uppercase;
-  font-size: 24px;
 }
 #details-title #details-title-white {
   color: white;
@@ -247,6 +241,7 @@ button span {
 #menu a {
   color: black;
   padding: 7px;
+  font-size: 1.1rem;
 }
 #menu a:hover {
   background-color: black;

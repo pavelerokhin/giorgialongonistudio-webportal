@@ -64,16 +64,10 @@ button span {
       .name {
         color: white !important;
         cursor: url("/media/square_light.png") 3 3, auto !important;
-        font-weight: 400;
-        text-align: center;
+        font-size: $heading-item-title-font-size;
+        font-weight: lighter;
         text-align: center;
         text-transform: uppercase;
-      }
-      .name {
-        font-size: 12px;
-      }
-      .caption {
-        font-size: 10px;
       }
     }
   }
@@ -88,8 +82,8 @@ button span {
 
   #details-title-black,
   #details-title-white {
+    font-size: $heading-item-title-font-size;
     text-transform: uppercase;
-    font-size: 24px;
   }
 
   #details-title-white {
@@ -142,8 +136,8 @@ button span {
 
   a {
     color: black;
-
     padding: 7px;
+    font-size: $heading-item-title-font-size;
 
     &:hover {
       background-color: black;
