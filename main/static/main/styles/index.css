@@ -477,7 +477,7 @@ ul {
   color: white;
   cursor: url("/media/square_light.png") 3 3, auto;
   line-height: 420px;
-  font-size: 28px;
+  font-size: 1.1rem;
   font-weight: 300;
   text-align: center;
   text-transform: uppercase;
@@ -620,6 +620,7 @@ footer {
   left: 50px;
   position: absolute;
   top: 50px;
+  font-size: 1.1rem;
   font-weight: lighter !important;
 }
 
