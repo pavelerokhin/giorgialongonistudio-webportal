@@ -125,30 +125,6 @@
         <p class="section-title">Projects</p>
         <div id="categories-container">
           <div class="category-container">
-            {% if projects_present.headquarter %}
-            <a
-              href="/projects/headquarter"
-              id="headquarter"
-              class="category"
-              style="background-image: url('media/{{ category_covers.headquarter }}')"
-            >
-              <span class="category-title">headquarter</span>
-            </a>
-            {% endif %}
-          </div>
-          <div class="category-container">
-            {% if projects_present.hospitality %}
-            <a
-              href="/projects/hospitality"
-              id="hospitality"
-              class="category"
-              style="background-image: url('media/{{ category_covers.hospitality }}')"
-            >
-              <span class="category-title">hospitality</span>
-            </a>
-            {% endif %}
-          </div>
-          <div class="category-container">
             {% if projects_present.residential %}
             <a
               href="/projects/residential"
@@ -184,6 +160,30 @@
             </a>
             {% endif %}
           </div>
+          <div class="category-container">
+            {% if projects_present.hospitality %}
+            <a
+              href="/projects/hospitality"
+              id="hospitality"
+              class="category"
+              style="background-image: url('media/{{ category_covers.hospitality }}')"
+            >
+              <span class="category-title">hospitality</span>
+            </a>
+            {% endif %}
+          </div>
+          <div class="category-container">
+            {% if projects_present.headquarter %}
+            <a
+              href="/projects/headquarter"
+              id="headquarter"
+              class="category"
+              style="background-image: url('media/{{ category_covers.headquarter }}')"
+            >
+              <span class="category-title">headquarter</span>
+            </a>
+            {% endif %}
+          </div>
         </div>
       </section>
       <div class="asterisc">
@@ -192,30 +192,24 @@
       <section id="contacts">
         <p class="section-title">Contacts</p>
         <div id="contacts-container" class="dark-panel">
-          <a
-            href="mailto:giorgia@giorgialongonistudio.com"
-            class="contact contact-top"
-            id="source-email"
-            ><span class="source-label" id="source-email-label">mail:</span
-            ><span id="source-mail-content">
+          <a href="mailto:giorgia@giorgialongonistudio.com" class="contact">
+            <span class="source-label">mail</span>
+            <span id="source-mail-content">
               giorgia@giorgialongonistudio.com</span
-            ></a
-          >
+            >
+          </a>
           <a
             href="https://www.instagram.com/giorgialongonistudio"
             target="blank"
-            class="contact contact-middle"
-            id="source-insta-pc"
-            ><span class="source-label source-insta-label">insta:</span
-            ><span id="source-insta-content"> @giorgialongonistudio</span></a
+            class="contact"
           >
-          <a
-            href="tel:+393395756434"
-            class="contact contact-bottom"
-            id="source-tel"
-            ><span class="source-label" id="source-tel-label">tel:</span
-            ><span class="source-content"> +39 (339) 575-6434</span></a
-          >
+            <span class="source-label">insta</span>
+            <span id="source-insta-content"> @giorgialongonistudio</span>
+          </a>
+          <a href="tel:+393395756434" class="contact">
+            <span class="source-label">tel</span>
+            <span class="source-content"> +39 339 5756434</span>
+          </a>
         </div>
         <div id="blink-photos-contacts"></div>
       </section>

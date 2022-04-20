@@ -24,22 +24,19 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-width: 450px;
+    width: 350px;
     padding: 40px 25px;
     z-index: $z-index-front;
 
     #menu-container {
-      align-items: center;
       color: white;
       cursor: url("/media/square_light.png") 3 3, auto;
       display: flex;
       flex-direction: column;
       font-size: 22px;
-      justify-content: center;
       list-style-type: none;
       margin: auto;
       top: 0;
-      width: 70%;
       z-index: $z-index-front;
 
       #logo {
@@ -57,7 +54,7 @@
       .menu-item {
         min-width: 300px;
         padding-bottom: 3px;
-        height: 55px;
+        height: 45px;
         width: 30%;
 
         &:not(:first-child) {
@@ -65,13 +62,11 @@
         }
 
         .menu-link {
-          border-bottom: 1px solid $white;
           cursor: url("/media/cross_light.png") 3 3, auto;
           display: block;
           height: 100%;
-          line-height: 49px;
-          text-align: center;
-          font-size: 1.2rem;
+          line-height: 45px;
+          font-size: $heading-item-title-font-size;
           width: 100%;
 
           &:visited {

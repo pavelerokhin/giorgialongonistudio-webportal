@@ -2,10 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap");
 
 //colors
+$black: rgb(17, 16, 16);
 $black-transparent: rgba(17, 16, 16, 0.85);
 $grey: #939393;
 $light-grey: #cdcdcd;
 $white: #ffffff;
+
+// fonts
+$heading-item-title-font-size: 1.1rem;
 
 //visibility order
 $z-index-background: 1;
@@ -85,8 +89,7 @@ ul {
 }
 
 .dark-panel {
-  backdrop-filter: brightness(120%);
-  background-color: $black-transparent;
+  background-color: $black;
   cursor: url("/media/square_light.png") 3 3, auto;
   * {
     cursor: url("/media/square_light.png") 3 3, auto;

@@ -69,8 +69,7 @@ ul {
 }
 
 .dark-panel {
-  backdrop-filter: brightness(120%);
-  background-color: rgba(17, 16, 16, 0.85);
+  background-color: #111010;
   cursor: url("/media/square_light.png") 3 3, auto;
 }
 .dark-panel * {
@@ -134,22 +133,19 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-width: 450px;
+  width: 350px;
   padding: 40px 25px;
   z-index: 1000;
 }
 #main #logo-menu #menu-container {
-  align-items: center;
   color: white;
   cursor: url("/media/square_light.png") 3 3, auto;
   display: flex;
   flex-direction: column;
   font-size: 22px;
-  justify-content: center;
   list-style-type: none;
   margin: auto;
   top: 0;
-  width: 70%;
   z-index: 1000;
 }
 #main #logo-menu #menu-container #logo {
@@ -161,20 +157,18 @@ ul {
 #main #logo-menu #menu-container .menu-item {
   min-width: 300px;
   padding-bottom: 3px;
-  height: 55px;
+  height: 45px;
   width: 30%;
 }
 #main #logo-menu #menu-container .menu-item:not(:first-child) {
   margin-top: 12px;
 }
 #main #logo-menu #menu-container .menu-item .menu-link {
-  border-bottom: 1px solid #ffffff;
   cursor: url("/media/cross_light.png") 3 3, auto;
   display: block;
   height: 100%;
-  line-height: 49px;
-  text-align: center;
-  font-size: 1.2rem;
+  line-height: 45px;
+  font-size: 1.1rem;
   width: 100%;
 }
 #main #logo-menu #menu-container .menu-item .menu-link:visited {
@@ -483,7 +477,7 @@ ul {
   color: white;
   cursor: url("/media/square_light.png") 3 3, auto;
   line-height: 420px;
-  font-size: 28px;
+  font-size: 1.1rem;
   font-weight: 300;
   text-align: center;
   text-transform: uppercase;
@@ -505,8 +499,8 @@ ul {
   color: #ffffff;
   display: flex;
   margin-left: auto;
-  max-width: 450px;
-  min-width: 400px;
+  max-width: 350px;
+  min-width: 300px;
   padding: 20px;
   position: relative;
   text-indent: 7px;
@@ -574,25 +568,28 @@ ul {
   position: absolute;
   z-index: 1000;
 }
-#contacts #contacts-container a {
+#contacts #contacts-container .contact {
   border: 10px solid transparent;
   color: white;
   cursor: url("/media/cross_light.png") 3 3, auto;
   display: block;
-  font-size: 1.7em;
-  height: 40px;
-  line-height: 40px;
+  font-size: 1.5rem;
+  height: 35px;
+  line-height: 35px;
 }
-#contacts #contacts-container a:visited {
+#contacts #contacts-container .contact:visited {
   color: #ffffff;
 }
-#contacts #contacts-container a:hover * {
+#contacts #contacts-container .contact:hover * {
   cursor: url("/media/cross_light.png") 3 3, auto;
   text-decoration: underline;
   font-weight: 500;
 }
-#contacts #contacts-container a:not(:first-child) {
+#contacts #contacts-container .contact:not(:first-child) {
   margin-top: 15px;
+}
+#contacts #contacts-container .contact .source-label {
+  margin-right: 10px;
 }
 #contacts #contacts-photos {
   bottom: 0;
@@ -626,6 +623,7 @@ footer {
   left: 50px;
   position: absolute;
   top: 50px;
+  font-size: 1.1rem;
   font-weight: lighter !important;
 }
 
