@@ -499,8 +499,8 @@ ul {
   color: #ffffff;
   display: flex;
   margin-left: auto;
-  max-width: 450px;
-  min-width: 400px;
+  max-width: 350px;
+  min-width: 300px;
   padding: 20px;
   position: relative;
   text-indent: 7px;
