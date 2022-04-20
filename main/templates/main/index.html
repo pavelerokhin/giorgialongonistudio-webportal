@@ -125,30 +125,6 @@
         <p class="section-title">Projects</p>
         <div id="categories-container">
           <div class="category-container">
-            {% if projects_present.headquarter %}
-            <a
-              href="/projects/headquarter"
-              id="headquarter"
-              class="category"
-              style="background-image: url('media/{{ category_covers.headquarter }}')"
-            >
-              <span class="category-title">headquarter</span>
-            </a>
-            {% endif %}
-          </div>
-          <div class="category-container">
-            {% if projects_present.hospitality %}
-            <a
-              href="/projects/hospitality"
-              id="hospitality"
-              class="category"
-              style="background-image: url('media/{{ category_covers.hospitality }}')"
-            >
-              <span class="category-title">hospitality</span>
-            </a>
-            {% endif %}
-          </div>
-          <div class="category-container">
             {% if projects_present.residential %}
             <a
               href="/projects/residential"
@@ -181,6 +157,30 @@
               style="background-image: url('media/{{ category_covers.scenography }}')"
             >
               <span class="category-title">scenography</span>
+            </a>
+            {% endif %}
+          </div>
+          <div class="category-container">
+            {% if projects_present.hospitality %}
+            <a
+              href="/projects/hospitality"
+              id="hospitality"
+              class="category"
+              style="background-image: url('media/{{ category_covers.hospitality }}')"
+            >
+              <span class="category-title">hospitality</span>
+            </a>
+            {% endif %}
+          </div>
+          <div class="category-container">
+            {% if projects_present.headquarter %}
+            <a
+              href="/projects/headquarter"
+              id="headquarter"
+              class="category"
+              style="background-image: url('media/{{ category_covers.headquarter }}')"
+            >
+              <span class="category-title">headquarter</span>
             </a>
             {% endif %}
           </div>
