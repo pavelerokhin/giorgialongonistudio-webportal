@@ -10,14 +10,14 @@
     position: absolute;
     z-index: $z-index-front;
 
-    a {
+    .contact {
       border: 10px solid transparent;
       color: white;
       cursor: url("/media/cross_light.png") 3 3, auto;
       display: block;
-      font-size: 1.7em;
-      height: 40px;
-      line-height: 40px;
+      font-size: 1.5rem;
+      height: 35px;
+      line-height: 35px;
 
       &:visited {
         color: $white;
@@ -33,6 +33,10 @@
 
       &:not(:first-child) {
         margin-top: 15px;
+      }
+
+      .source-label {
+        margin-right: 10px;
       }
     }
   }

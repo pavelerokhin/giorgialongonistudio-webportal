@@ -568,25 +568,28 @@ ul {
   position: absolute;
   z-index: 1000;
 }
-#contacts #contacts-container a {
+#contacts #contacts-container .contact {
   border: 10px solid transparent;
   color: white;
   cursor: url("/media/cross_light.png") 3 3, auto;
   display: block;
-  font-size: 1.7em;
-  height: 40px;
-  line-height: 40px;
+  font-size: 1.5rem;
+  height: 35px;
+  line-height: 35px;
 }
-#contacts #contacts-container a:visited {
+#contacts #contacts-container .contact:visited {
   color: #ffffff;
 }
-#contacts #contacts-container a:hover * {
+#contacts #contacts-container .contact:hover * {
   cursor: url("/media/cross_light.png") 3 3, auto;
   text-decoration: underline;
   font-weight: 500;
 }
-#contacts #contacts-container a:not(:first-child) {
+#contacts #contacts-container .contact:not(:first-child) {
   margin-top: 15px;
+}
+#contacts #contacts-container .contact .source-label {
+  margin-right: 10px;
 }
 #contacts #contacts-photos {
   bottom: 0;
