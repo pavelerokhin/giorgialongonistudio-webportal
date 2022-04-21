@@ -16,7 +16,7 @@ def index(request):
     slides = MainPageCoverPhotos.objects.all().order_by('order')
     categories = Category.objects.all()
     retail = categories.get(name='retail')
-		
+	
     try:
         hospitality = categories.get(name='hospitality')
     except ObjectDoesNotExist:
@@ -87,8 +87,9 @@ def projects(request, type):
 
 def project_detail(request, id):
     p = Project.objects.filter(id=id).first()
+    project_caption = p.caption
     photo_objects = Photo.objects.filter(project=p.id)
-    details = {"name": p.name, "photos": {}}
+    details = {"caption": project_caption, "name": p.name, "photos": {}}
     for po in photo_objects:
         details["photos"][str(po.order)] = {
             "caption": po.caption,
