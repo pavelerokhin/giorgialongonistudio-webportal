@@ -9,20 +9,24 @@ window.onload = () => {
     document.querySelector("#cover").remove();
   }, 500);
 
+  mobileDeviceDetailsClose();
+  window.addEventListener("resize", mobileDeviceDetailsClose);
+};
+
+function mobileDeviceDetailsClose() {
   const detailsContainer = document.getElementById("details-container");
-  // test if mobile device
+
   isMobileOrSmallScreen = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
     navigator.userAgent
   );
   if (isMobileOrSmallScreen) {
     detailsContainer.addEventListener("click", (e) => {
-      debugger;
       if (e.target.id == "details-container") {
         detailsContainer.classList.add("hidden");
       }
     });
   }
-};
+}
 
 function _detail_caption(caption) {
   let caption_element = document.querySelector("#detail-description");

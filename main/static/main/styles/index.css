@@ -49,6 +49,18 @@ body {
   overflow-x: hidden;
 }
 
+footer {
+  bottom: 0;
+  color: white;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: 1000;
+}
+footer p {
+  font-weight: 100;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -595,15 +607,6 @@ ul {
   bottom: 0;
   position: sticky;
   right: 0;
-}
-
-footer {
-  bottom: 0;
-  color: white;
-  position: fixed;
-  text-align: center;
-  width: 100%;
-  z-index: 1000;
 }
 
 .asterisc {

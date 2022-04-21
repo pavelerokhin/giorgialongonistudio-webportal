@@ -6,15 +6,6 @@
 @import "about-section";
 @import "contacts-section";
 
-footer {
-  bottom: 0;
-  color: white;
-  position: fixed;
-  text-align: center;
-  width: 100%;
-  z-index: $z-index-front;
-}
-
 .asterisc {
   line-height: 38px;
   text-align: center;
