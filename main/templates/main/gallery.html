@@ -53,16 +53,19 @@
             onclick="get_detail('/detail/{{ project.id }}')"
           >
             <p class="name">{{ project.name }}</p>
-            <p class="caption">{{ project.caption }}</p>
           </div>
         </div>
         {% endfor %}
       </div>
       <div id="details-container" class="hidden">
-        <div id="details-title">
-          <p id="details-title-black"></p>
-          <p id="details-title-white"></p>
+        <div id="title-description-container">
+          <div id="details-title">
+            <p id="details-title-white"></p>
+            <p id="details-title-black"></p>
+          </div>
+          <div id="project-description"></div>
         </div>
+
         <div id="details" class="m-p-g"></div>
       </div>
     </div>
