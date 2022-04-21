@@ -70,7 +70,7 @@ button span {
         color: white !important;
         cursor: url("/media/square_light.png") 3 3, auto !important;
         font-size: $heading-item-title-font-size;
-        font-weight: lighter;
+        font-weight: 500;
         text-align: center;
         text-transform: uppercase;
       }
@@ -79,8 +79,9 @@ button span {
 }
 
 #details-container {
-  opacity: 1;
-  position: relative;
+  // position: relative;
+  position: fixed;
+  right: 0;
   width: 40%;
 
   #title-description-container {
@@ -88,8 +89,11 @@ button span {
     display: flex;
     flex-direction: column;
     margin: 15px;
+    position: relative;
 
-    #details-description {
+    #detail-description {
+      font-weight: 100 !important;
+      text-align: end;
       width: 100%;
     }
     #details-title {

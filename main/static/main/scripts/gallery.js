@@ -25,7 +25,7 @@ window.onload = () => {
 };
 
 function _detail_caption(caption) {
-  let caption_element = document.querySelector("#project-description");
+  let caption_element = document.querySelector("#detail-description");
   if (!caption) {
     return;
   }
