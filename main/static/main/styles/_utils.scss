@@ -70,6 +70,19 @@ body {
   overflow-x: hidden;
 }
 
+footer {
+  bottom: 0;
+  color: white;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: $z-index-front;
+
+  p {
+    font-weight: 100;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }

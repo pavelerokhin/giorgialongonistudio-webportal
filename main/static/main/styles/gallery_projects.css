@@ -49,6 +49,18 @@ body {
   overflow-x: hidden;
 }
 
+footer {
+  bottom: 0;
+  color: white;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: 1000;
+}
+footer p {
+  font-weight: 100;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -114,6 +126,7 @@ ul {
 
 .m-p-g {
   max-width: 100% !important;
+  z-index: 5000;
 }
 
 button,
@@ -211,6 +224,7 @@ button span {
 #details-container {
   position: fixed;
   right: 0;
+  top: 0;
   width: 40%;
 }
 #details-container #title-description-container {
@@ -302,7 +316,7 @@ button span {
     position: fixed;
     top: 10px;
     width: 100%;
-    z-index: 1000;
+    z-index: 100;
   }
   #menu a {
     line-height: 30px;

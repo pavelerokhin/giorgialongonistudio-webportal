@@ -113,6 +113,7 @@ button span {
   // position: relative;
   position: fixed;
   right: 0;
+  top: 0;
   width: 40%;
 
   #title-description-container {
@@ -212,7 +213,7 @@ button span {
     position: fixed;
     top: 10px;
     width: 100%;
-    z-index: $z-index-front;
+    z-index: $z-index-middle;
 
     a {
       line-height: 30px;
