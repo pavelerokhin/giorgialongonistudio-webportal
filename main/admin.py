@@ -26,7 +26,7 @@ class CategoryAdmin(admin.ModelAdmin):
 class ProjectAdmin(admin.ModelAdmin):
     list_display = ('name', 'category', 'order', 'get_html_photo', 'project_photo')
     list_display_links = ('name', 'category', 'order', 'project_photo')
-    search_fields = ('name', 'category')
+    search_fields = ['category__name','name']
 
     def get_html_photo(self, object):
         if object.project_photo:
@@ -46,7 +46,7 @@ class PhotoAdmin(admin.ModelAdmin):
     list_display = ('project', 'caption', 'get_html_photo', 'photo', 'order')
     list_display_links = ('project', )
     list_editable = ('caption',)
-    search_fields = ('project', 'order')
+    search_fields = ('project__name', )
 
     fields = ('project', 'caption', 'get_html_photo_big', 'photo', 'order')
     readonly_fields = ('get_html_photo_big', )
