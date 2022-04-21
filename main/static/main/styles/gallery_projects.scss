@@ -78,6 +78,37 @@ button span {
   }
 }
 
+@include media("<=1350px") {
+  .projects {
+    align-items: center;
+    justify-items: center;
+    // max-width: 400px;
+    width: 100%;
+
+    #projects-title {
+      display: block;
+      margin: 37px auto 0 auto;
+      position: static;
+      font-weight: 100 !important;
+    }
+    #projects-title-white {
+      display: none;
+    }
+
+    .project-container {
+      margin: 5px 0;
+      max-height: 350px;
+      max-width: 600px;
+      width: 100%;
+
+      #project-front,
+      #project-back {
+        min-width: 100%;
+      }
+    }
+  }
+}
+
 #details-container {
   // position: relative;
   position: fixed;
@@ -139,6 +170,17 @@ button span {
   }
 }
 
+@include media("<=1350px") {
+  #details-container {
+    background-color: $white;
+    padding: 15px;
+    position: fixed;
+    top: 25px;
+    height: 100vh;
+    width: 100%;
+  }
+}
+
 #menu {
   border-right: 1px solid black;
   color: white;
@@ -163,35 +205,20 @@ button span {
 }
 
 @include media("<=1350px") {
-  #details-container {
-    background-color: $white;
-    padding: 15px;
-    position: fixed;
-    top: 25px;
-    height: 100vh;
-    width: 100%;
-  }
-
   #menu {
-    background-color: white;
+    background-color: $white-transparent;
     flex-direction: row;
-    height: 25px;
+    height: 30px;
+    position: fixed;
+    top: 10px;
     width: 100%;
-  }
-}
+    z-index: $z-index-front;
 
-#projects-container {
-  display: flex;
-}
-
-@include media("<=1350px") {
-  #projects-container {
-    width: 100%;
-    .projects {
-      align-items: center;
-      justify-items: center;
-      min-width: 400px;
-      width: 100%;
+    a {
+      line-height: 30px;
+      margin: 0 5px;
+      padding: 1px 4px;
+      text-align: center;
     }
   }
 }
