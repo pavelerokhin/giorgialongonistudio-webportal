@@ -133,13 +133,16 @@ button span {
   margin-left: 195px;
   text-transform: uppercase;
   font-size: 25px;
-  z-index: 1000;
+}
+.projects #projects-title {
+  z-index: 10;
 }
 .projects #projects-title-white {
   bottom: 25px;
   color: white;
   position: fixed;
   right: 25px;
+  z-index: 1000;
 }
 .projects .project-container {
   position: relative;
@@ -170,7 +173,6 @@ button span {
   height: 100%;
   width: 100%;
 }
-.projects .project-container .project-front .caption,
 .projects .project-container .project-front .name {
   color: white !important;
   cursor: url("/media/square_light.png") 3 3, auto !important;
@@ -180,23 +182,39 @@ button span {
   text-transform: uppercase;
 }
 
-#details-title {
-  padding: 2px;
-  position: fixed;
-  right: 25px;
-  top: 25px;
-  z-index: 1000;
+#details-container {
+  opacity: 1;
+  position: relative;
+  width: 40%;
 }
-#details-title #details-title-black,
-#details-title #details-title-white {
+#details-container #title-description-container {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+#details-container #title-description-container #details-description {
+  width: 100%;
+}
+#details-container #title-description-container #details-title {
+  display: flex;
+  margin-bottom: 10px;
+  padding: 2px;
+}
+#details-container #title-description-container #details-title #details-title-black,
+#details-container #title-description-container #details-title #details-title-white {
   font-size: 1.1rem;
   text-transform: uppercase;
 }
-#details-title #details-title-white {
+#details-container #title-description-container #details-title #details-title-white {
   color: white;
+  z-index: 10;
 }
-
-#details {
+#details-container #title-description-container #details-title #details-title-white {
+  color: white;
+  z-index: 1000;
+}
+#details-container #details {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
@@ -205,27 +223,15 @@ button span {
   right: 0;
   top: 10%;
   width: 100%;
+  z-index: 100;
 }
-#details .detail {
+#details-container #details .detail {
   align-self: center;
   justify-self: center;
 }
-#details .detail .detail_photo {
+#details-container #details .detail .detail_photo {
   margin-bottom: 1px;
   margin-right: 1px;
-}
-
-#details-container {
-  opacity: 1;
-  position: relative;
-  width: 40%;
-}
-
-#details-container-mobile {
-  opacity: 1;
-  position: fixed;
-  height: 100vh;
-  width: 100%;
 }
 
 #menu {
@@ -250,8 +256,7 @@ button span {
 }
 
 @media (max-width: 1350px) {
-  #details-container,
-#details-container-mobile {
+  #details-container {
     background-color: #ffffff;
     padding: 15px;
     position: fixed;

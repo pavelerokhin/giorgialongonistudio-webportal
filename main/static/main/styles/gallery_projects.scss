@@ -23,7 +23,10 @@ button span {
     margin-left: $menu-width + 25;
     text-transform: uppercase;
     font-size: 25px;
-    z-index: $z-index-front;
+  }
+
+  #projects-title {
+    z-index: $z-index-back;
   }
 
   #projects-title-white {
@@ -31,6 +34,7 @@ button span {
     color: white;
     position: fixed;
     right: 25px;
+    z-index: $z-index-front;
   }
 
   .project-container {
@@ -41,6 +45,7 @@ button span {
     margin-top: 25px;
     height: 400px;
     width: 600px;
+
     .project-back {
       background-position: center;
       background-repeat: no-repeat;
@@ -60,7 +65,7 @@ button span {
       position: absolute;
       height: 100%;
       width: 100%;
-      .caption,
+
       .name {
         color: white !important;
         cursor: url("/media/square_light.png") 3 3, auto !important;
@@ -73,55 +78,61 @@ button span {
   }
 }
 
-#details-title {
-  padding: 2px;
-  position: fixed;
-  right: 25px;
-  top: 25px;
-  z-index: $z-index-front;
-
-  #details-title-black,
-  #details-title-white {
-    font-size: $heading-item-title-font-size;
-    text-transform: uppercase;
-  }
-
-  #details-title-white {
-    color: white;
-  }
-}
-
-#details {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  position: sticky;
-  right: 0;
-  top: 10%;
-  width: 100%;
-
-  .detail {
-    align-self: center;
-    justify-self: center;
-    .detail_photo {
-      margin-bottom: 1px;
-      margin-right: 1px;
-    }
-  }
-}
-
 #details-container {
   opacity: 1;
   position: relative;
   width: 40%;
-}
 
-#details-container-mobile {
-  opacity: 1;
-  position: fixed;
-  height: 100vh;
-  width: 100%;
+  #title-description-container {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+
+    #details-description {
+      width: 100%;
+    }
+    #details-title {
+      display: flex;
+      margin-bottom: 10px;
+      padding: 2px;
+
+      #details-title-black,
+      #details-title-white {
+        font-size: $heading-item-title-font-size;
+        text-transform: uppercase;
+      }
+      #details-title-white {
+        color: white;
+        z-index: $z-index-back;
+      }
+      #details-title-white {
+        color: white;
+        z-index: $z-index-front;
+      }
+    }
+  }
+
+  #details {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: sticky;
+    right: 0;
+    top: 10%;
+    width: 100%;
+    z-index: $z-index-middle;
+
+    .detail {
+      align-self: center;
+      justify-self: center;
+      .detail_photo {
+        margin-bottom: 1px;
+        margin-right: 1px;
+      }
+    }
+  }
 }
 
 #menu {
@@ -148,8 +159,7 @@ button span {
 }
 
 @include media("<=1350px") {
-  #details-container,
-  #details-container-mobile {
+  #details-container {
     background-color: $white;
     padding: 15px;
     position: fixed;
@@ -168,7 +178,6 @@ button span {
 
 #projects-container {
   display: flex;
-  // height: 100vh;
 }
 
 @include media("<=1350px") {
@@ -182,12 +191,3 @@ button span {
     }
   }
 }
-
-// .m-p-g__thumbs {
-//     width: 100% !important;
-//     .m-p-g__thumbs-img {
-//         height: auto;
-//         max-width: 300px !important;
-
-//     }
-// }
