@@ -24,7 +24,15 @@ window.onload = () => {
   }
 };
 
-function _detail_mpg_init() {
+function _detail_caption(caption) {
+  let caption_element = document.querySelector("#project-description");
+  if (!caption) {
+    return;
+  }
+  caption_element.innerText = caption;
+}
+
+function _detail_mpg() {
   const detailsContainer = document.getElementById("details-container");
   detailsContainer.classList.remove("hidden");
 
@@ -60,16 +68,15 @@ function _detail_mpg_populate(photos) {
   }
 }
 
-function _detail_titles_init(name) {
-  let details_title = document.getElementById("details-title-black");
-  details_title.innerText = name;
-  details_title = document.getElementById("details-title-white");
-  details_title.innerText = name;
+function _detail_titles(name) {
+  document.getElementById("details-title-black").innerText = name;
+  document.getElementById("details-title-white").innerText = name;
 }
 
 function add_details(details) {
-  _detail_titles_init(details.name);
-  _detail_mpg_init();
+  _detail_titles(details.name);
+  _detail_caption(details.caption);
+  _detail_mpg();
   _detail_mpg_populate(details.photos);
   const elem = document.querySelector(".m-p-g");
   new MaterialPhotoGallery(elem);
