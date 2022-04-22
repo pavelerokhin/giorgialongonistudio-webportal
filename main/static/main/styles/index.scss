@@ -36,6 +36,12 @@ footer {
   font-weight: lighter !important;
 }
 
+@include media("<=1350px") {
+  .section-title {
+    display: none;
+  }
+}
+
 $go-up-size: 34px;
 #go-up {
   border: 1px solid black;

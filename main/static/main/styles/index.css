@@ -468,7 +468,7 @@ section#projects {
   background-position: center;
   background-size: contain;
   height: 420px;
-  max-width: 900px;
+  max-width: 600px;
   min-width: 300px;
   width: 80%;
 }
@@ -491,7 +491,6 @@ section#projects {
   }
   #categories-container .category-container .category {
     height: 23vh;
-    max-width: unset;
     width: 94%;
   }
   #categories-container .category-container .category-title {
@@ -635,6 +634,11 @@ footer {
   font-weight: lighter !important;
 }
 
+@media (max-width: 1350px) {
+  .section-title {
+    display: none;
+  }
+}
 #go-up {
   border: 1px solid black;
   border-radius: 34px;
