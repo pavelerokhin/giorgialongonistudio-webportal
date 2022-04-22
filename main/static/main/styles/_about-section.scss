@@ -45,6 +45,22 @@
   }
 }
 
+@include media("<=1350px") {
+  #story-container {
+    background-color: unset;
+    h1 {
+      background-color: $black;
+      padding: 10px;
+    }
+
+    p {
+      background-color: $black;
+      font-weight: 100;
+      padding: 10px;
+    }
+  }
+}
+
 @include media(">=desktop") {
   #about {
     align-items: center;
