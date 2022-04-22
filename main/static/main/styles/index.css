@@ -551,6 +551,20 @@ section#projects {
   min-width: 50%;
 }
 
+@media (max-width: 1350px) {
+  #story-container {
+    background-color: unset;
+  }
+  #story-container h1 {
+    background-color: #111010;
+    padding: 10px;
+  }
+  #story-container p {
+    background-color: #111010;
+    font-weight: 100;
+    padding: 10px;
+  }
+}
 @media (min-width: 1024px) {
   #about {
     align-items: center;
