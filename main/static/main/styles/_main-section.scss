@@ -1,8 +1,4 @@
-// colors
-
 #main {
-  // align-items: center;
-  // justify-content: center;
   overflow: hidden;
   position: relative;
   height: 100vh;
@@ -41,13 +37,8 @@
 
       #logo {
         align-self: flex-start;
-        // color: $white;
         cursor: url("/media/square_light.png") 3 3, auto;
-        // font-size: 30px;
-        // font-weight: lighter;
         margin-bottom: 45px;
-        // padding-bottom: 35px;
-        // text-align: left;
         width: 250px;
       }
 
@@ -87,6 +78,27 @@
     overflow: hidden;
     position: absolute;
     right: 0;
+  }
+}
+
+@include media("<=600px") {
+  #main {
+    #logo-menu {
+      background-color: unset;
+      #menu-container {
+        #logo {
+          background-color: $black;
+          padding: 10px;
+        }
+
+        .menu-item {
+          background-color: $black;
+          min-width: unset;
+          padding: 10px;
+          width: 250px;
+        }
+      }
+    }
   }
 }
 

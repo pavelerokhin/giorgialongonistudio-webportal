@@ -197,6 +197,21 @@ ul {
   right: 0;
 }
 
+@media (max-width: 600px) {
+  #main #logo-menu {
+    background-color: unset;
+  }
+  #main #logo-menu #menu-container #logo {
+    background-color: #111010;
+    padding: 10px;
+  }
+  #main #logo-menu #menu-container .menu-item {
+    background-color: #111010;
+    min-width: unset;
+    padding: 10px;
+    width: 250px;
+  }
+}
 @media (min-width: 1024px) {
   #main #carousel {
     display: block;
