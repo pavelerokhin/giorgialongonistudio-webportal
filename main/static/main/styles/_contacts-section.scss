@@ -47,3 +47,25 @@
     right: 0;
   }
 }
+
+@include media("<=700px") {
+  #contacts {
+    // height: unset;
+    // width: 100%;
+
+    #blink-photos-contacts {
+      height: unset;
+      max-height: 1200px;
+      min-height: 600px;
+      position: absolute;
+    }
+
+    #contacts-container {
+      .contact {
+        font-size: 0.9rem;
+        height: 35px;
+        line-height: 35px;
+      }
+    }
+  }
+}
