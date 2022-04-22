@@ -645,6 +645,19 @@ section#projects {
   right: 0;
 }
 
+@media (max-width: 700px) {
+  #contacts #blink-photos-contacts {
+    height: unset;
+    max-height: 1200px;
+    min-height: 600px;
+    position: absolute;
+  }
+  #contacts #contacts-container .contact {
+    font-size: 0.9rem;
+    height: 35px;
+    line-height: 35px;
+  }
+}
 .asterisc {
   line-height: 38px;
   text-align: center;
