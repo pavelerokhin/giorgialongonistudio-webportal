@@ -1,5 +1,6 @@
-.m-p-g__thumbs {
-  max-width: 24%;
+section#projects {
+  height: unset;
+  width: 100%;
 }
 
 #categories-container {
@@ -21,21 +22,19 @@
       display: flex;
       background-attachment: fixed;
       background-position: center;
-      background-repeat: repeat-y;
       background-size: contain;
       height: 420px;
       max-width: 900px;
       min-width: 300px;
       width: 80%;
     }
-
     .category-title {
       backdrop-filter: brightness(80%);
       color: white;
       cursor: url("/media/square_light.png") 3 3, auto;
       line-height: 420px;
       font-size: $heading-item-title-font-size;
-      font-weight: 300;
+      font-weight: 500;
       text-align: center;
       text-transform: uppercase;
       width: 100%;
@@ -44,7 +43,19 @@
   }
 }
 
-#projects {
-  height: unset;
-  width: 100%;
+@include media("<=1350px") {
+  #categories-container {
+    .category-container {
+      width: 100%;
+
+      .category {
+        height: 23vh;
+        max-width: unset;
+        width: 94%;
+      }
+      .category-title {
+        line-height: 23vh;
+      }
+    }
+  }
 }
